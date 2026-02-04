@@ -27,8 +27,8 @@ function updateTopic(dateStr) {
       if (!html) return;
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, "text/html");
-      const h1 = doc.querySelector("h1");
-      topicInfo.textContent = h1 ? h1.textContent : "Тема не найдена";
+      const h2 = doc.querySelector("h2"); // <--- первый h2
+      topicInfo.textContent = h2 ? h2.textContent : "Тема не найдена";
     })
     .catch(err => {
       topicInfo.textContent = "Ошибка при загрузке задания.";
