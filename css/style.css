@@ -16,6 +16,9 @@
       font-size: 18px;
       background: var(--bg);
       color: var(--text-main);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
     }
 
     header {
